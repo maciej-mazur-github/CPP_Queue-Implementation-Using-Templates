@@ -245,16 +245,6 @@ ostream& operator<<(ostream& out, const List<T>& arg)
 }
 
 
-//template <class T>
-//typename list<T>::node* list<T>::find_node_before_chosen()
-//{
-//	node* bishop = first_node_ptr;
-//
-//	for (bishop; bishop->next_node_ptr != chosen_node_ptr; bishop = bishop->next_node_ptr);
-//
-//	return bishop;
-//}
-
 
 template <class T>
 void List<T>::add_element_in_middle(node* newly_added_node_ptr)

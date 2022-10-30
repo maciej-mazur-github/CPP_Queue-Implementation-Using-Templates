@@ -35,7 +35,6 @@ public:
 
 	friend ostream& operator<< <> (ostream& out, typename const Queue<T>& arg);
 	void loadArrayOfObjects(T arr[], int arraySize);
-	int howManyElementsInArray(T arr[]) { return sizeof(arr) / sizeof(arr[0]); }
 };
 
 

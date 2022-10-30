@@ -127,12 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Stack Implementation Using Templates\Stack Implementation Using Templates\Stack Implementation Using Templates\person.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="person.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Stack Implementation Using Templates\Stack Implementation Using Templates\Stack Implementation Using Templates\person.h" />
     <ClInclude Include="doubly_linked_list.h" />
+    <ClInclude Include="person.h" />
     <ClInclude Include="queue.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

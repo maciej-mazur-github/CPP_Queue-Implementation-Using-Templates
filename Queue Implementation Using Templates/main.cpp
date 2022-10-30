@@ -5,12 +5,14 @@
 
 int main()
 {
+	int howManyElementsInArray;
 
 	cout << "****************************\n";
 	cout << "Initiating ex1 queue:\n";
 	Queue<int> ex1;
 	int intArray[] = { 1, 2, 3, 4 };
-	ex1.loadArrayOfObjects(intArray, ex1.howManyElementsInArray(intArray));
+	howManyElementsInArray = sizeof(intArray) / sizeof(intArray[0]);
+	ex1.loadArrayOfObjects(intArray, howManyElementsInArray);
 	cout << "\n****************************\n";
 
 	cout << "Current ex1 status:\n";
@@ -37,11 +39,11 @@ int main()
 
 
 	cout << "\n\n****************************\n";
-	cout << "Initiating ex2 queue:\n";
+	cout << "Initiating ex3 queue:\n";
 	Queue<string> ex3;
 	string stringArray[] = {"Gordon", "Ramsey", "And", "Others"};
-	
-	ex3.loadArrayOfObjects(stringArray, ex3.howManyElementsInArray(stringArray));
+	howManyElementsInArray = sizeof(stringArray) / sizeof(stringArray[0]);
+	ex3.loadArrayOfObjects(stringArray, howManyElementsInArray);
 	cout << "\nCurrent ex3 status:\n";
 	cout << ex3;
 

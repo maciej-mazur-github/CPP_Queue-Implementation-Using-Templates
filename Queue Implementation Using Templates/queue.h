@@ -1,5 +1,5 @@
 #pragma once
-#include "Doubly_linked_list.h"
+#include "doubly_linked_list.h"
 
 
 template <class t>
@@ -14,22 +14,21 @@ class Queue : private List<T>    // private inheritance in order to hide all Lis
 {
 public:
 	Queue() {}
-		//: Queue::list<T>() {}
 
 	void push(T& arg)
 	{
-		List<T>::set_chosen_after_last();
-		List<T>::add_element(arg);
+		List<T>::setChosenAfterLast();
+		List<T>::addElement(arg);
 	}
 
 	T pop()
 	{
-		if (!List<T>::first_node_ptr)
+		if (!List<T>::firstNodePtr)
 			return NULL;
 
-		List<T>::set_chosen_as_first();
-		T temp = *(List<T>::first_node_ptr->obj_ptr);
-		List<T>::remove_chosen_element();
+		List<T>::setChosenAsFirst();
+		T temp = *(List<T>::firstNodePtr->objPtr);
+		List<T>::removeChosenElement();
 		return temp;
 	}
 
@@ -41,16 +40,16 @@ public:
 template <class T>
 ostream& operator<<(ostream& out, typename const Queue<T>& arg)
 {
-	if (!(arg.List<T>::first_node_ptr))
+	if (!(arg.List<T>::firstNodePtr))
 		return out;
 
-	typename List<T>::node* bishop = arg.first_node_ptr;
+	typename List<T>::Node* bishop = arg.firstNodePtr;
 
 	out << "\n";
 
-	for (; bishop; bishop = bishop->next_node_ptr)
+	for (; bishop; bishop = bishop->nextNodePtr)
 	{
-		out << *(bishop->obj_ptr) << "\t";
+		out << *(bishop->objPtr) << "\t";
 	}
 
 	out << "\n\n";
@@ -62,12 +61,12 @@ ostream& operator<<(ostream& out, typename const Queue<T>& arg)
 template <>
 string Queue<string>::pop()
 {
-	if (!List<string>::first_node_ptr)
-		return "";
+	if (!List<string>::firstNodePtr)
+		return "";						// instead of NULL which would produce an error
 
-	List<string>::set_chosen_as_first();
-	string temp = *(List<string>::first_node_ptr->obj_ptr);
-	List<string>::remove_chosen_element();
+	List<string>::setChosenAsFirst();
+	string temp = *(List<string>::firstNodePtr->objPtr);
+	List<string>::removeChosenElement();
 	return temp;
 }
 
